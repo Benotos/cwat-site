@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>$CWAT | The Studio Ghibli of Solana</title>
+    <meta name="description" content="A magical anomaly on the Solana blockchain. $CWAT brings high-end 2D art and zero-tax tokenomics to the trenches.">
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="custom-cursor-active">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"><span class="cursor-text"></span></div>
+
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-mascot-container">
+                <img src="assets/cwat-head.png" alt="Loading Anomaly" class="loader-cat pulse-glow">
+            </div>
+            <h2 class="loader-title">$CWAT</h2>
+            <div class="terminal-loader-text mono-text" id="loading-phrase">
+                > Initializing Solana mainnet connection...
+            </div>
+            <div class="loader-progress-wrapper">
+                <div class="loader-progress-bar"></div>
+            </div>
+            <div class="loader-percentage mono-text">000%</div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-inner mix-blend-mode">
+            <div class="brand">
+                <a href="index.html" class="magnetic-link" data-cursor="-hidden">$CWAT</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="tokenomics.html" class="magnetic-link" data-cursor="-pointer">Tokenomics</a></li>
+                    <li><a href="roadmap.html" class="magnetic-link" data-cursor="-pointer">Journey</a></li>
+                    <li><a href="whitepaper.html" class="magnetic-link" data-cursor="-pointer">Grimoire</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn-premium magnetic-link" data-cursor="-pointer">
+                    <span class="btn-text">Buy on Raydium</span>
+                    <span class="btn-hover-fill"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="section-hero" data-textcolor="#ffffff" data-bgcolor="#050505">
+                <div class="parallax-bg" data-speed="0.8">
+                    <div class="bg-image bg-forest"></div>
+                </div>
+                <div class="parallax-mid" data-speed="1.2">
+                    <div class="bg-image bg-details"></div>
+                </div>
+                <div class="hero-character-wrapper" data-speed="1.5">
+                    <img src="assets/cwat-head.png" alt="The $CWAT Cat" class="hero-cat" data-cursor="-explore">
+                </div>
+
+                <div class="hero-typography">
+                    <h1 class="hero-title split-text" data-cursor="-hidden">
+                        <span class="line">THE MAGICAL</span>
+                        <span class="line anomaly-glow">ANOMALY</span>
+                    </h1>
+                    <div class="ca-wrapper fade-in-up">
+                        <p class="ca-label">Contract Address</p>
+                        <p class="ca-string" id="ca-text">Coming_Soon_To_Solana</p>
+                        <button class="copy-icon magnetic-link" onclick="copyCA()">Copy</button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="marquee-wrapper">
+                <div class="marquee-inner">
+                    <div class="marquee-part">ZERO TAXES • LP BURNED • MINT REVOKED • COMMUNITY DRIVEN • </div>
+                    <div class="marquee-part">ZERO TAXES • LP BURNED • MINT REVOKED • COMMUNITY DRIVEN • </div>
+                </div>
+            </div>
+
+            <section class="section-lore pinned-section">
+                <div class="container">
+                    <div class="lore-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                        <div class="lore-text-col">
+                            <span class="mono-badge fade-in">Origins</span>
+                            <h2 class="reveal-type" data-cursor="-text" data-cursor-text="Read">
+                                Born in the deep woods of the blockchain, $CWAT isn't just another meta. It is an artistic rebellion against the mundane.
+                            </h2>
+                            <br><br>
+                            <a href="whitepaper.html" class="link-arrow fade-in">Read the Grimoire 
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                        <div class="lore-img-col parallax-element" data-speed="0.9">
+                            <img src="assets/cwat-river.jpg" alt="$CWAT in the river" style="width: 100%; border-radius: 20px;">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-ecosystem" data-textcolor="#ffffff" data-bgcolor="#121212">
+                <div class="container">
+                    <h2 class="massive-title text-center">The Ecosystem</h2>
+                    <div class="bento-grid">
+                        <div class="bento-box bento-large glass-card hover-reveal">
+                            <div class="bento-content">
+                                <h3>The Canvas</h3>
+                                <p>Exclusive high-resolution 2D drops reserved for top holders.</p>
+                            </div>
+                            <div class="bento-bg" style="background-image: url('assets/cwat-banner.jpg');"></div>
+                        </div>
+                        <div class="bento-box bento-small glass-card glow-border">
+                            <div class="bento-content">
+                                <h3>$10M+ Vol</h3>
+                                <p>Targeting top-tier CEX listings.</p>
+                            </div>
+                        </div>
+                        <div class="bento-box bento-small glass-card">
+                            <div class="bento-content">
+                                <h3>Memetic Power</h3>
+                                <p>Built for the culture, secured by Solana.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="roadmap.html" class="btn-premium magnetic-link"><span class="btn-text">View Full Journey</span><span class="btn-hover-fill"></span></a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="footer-top text-center">
+                        <h2 class="massive-title" data-cursor="-hidden">JOIN THE CULT</h2>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>$CWAT is a memecoin with no intrinsic value or expectation of financial return. Just pure, unadulterated 2D art.</p>
+                        <p>&copy; 2026 $CWAT on Solana.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div> 
+    </main> 
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    
+    <script src="js/animations.js"></script>
+    <script src="js/webgl-canvas.js"></script>
+</body>
+</html>

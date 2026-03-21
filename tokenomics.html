@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>$CWAT | Tokenomics & Acquisition</title>
+    <meta name="description" content="Zero taxes. LP Burned. Mint Revoked. Dive into the mechanics of the most magical 2D anomaly on Solana.">
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&f[]=cabinet-grotesk@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tokenomics.css"> </head>
+
+<body class="loading custom-cursor-active page-tokenomics">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="ambient-glow glow-top-right"></div>
+    <div class="ambient-glow glow-bottom-left"></div>
+
+    <header class="site-header glass-nav">
+        <div class="header-inner">
+            <div class="brand">
+                <a href="index.html" class="magnetic-link" data-cursor="-hidden">$CWAT</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="magnetic-link">Home</a></li>
+                    <li><a href="tokenomics.html" class="magnetic-link active">Tokenomics</a></li>
+                    <li><a href="roadmap.html" class="magnetic-link">Journey</a></li>
+                    <li><a href="whitepaper.html" class="magnetic-link">Grimoire</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn-premium magnetic-link launch-app">
+                    <span class="btn-text">Trade $CWAT</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="page-hero split-hero" data-textcolor="#ffffff">
+                <div class="hero-left">
+                    <div class="hero-text-content">
+                        <span class="mono-badge">TICKER: $CWAT</span>
+                        <h1 class="massive-title reveal-text">THE<br>MATH OF<br>MAGIC.</h1>
+                        <p class="hero-description fade-in-up">
+                            A completely trustless, decentralized ecosystem. No hidden wallets, no developer taxes, just pure memetic energy secured by the Solana blockchain.
+                        </p>
+                    </div>
+                </div>
+                <div class="hero-right parallax-element" data-speed="1.1">
+                    <div class="art-frame glass-panel">
+                        <img src="assets/cwat-giant.jpg" alt="$CWAT Tokenomics Art" class="hero-art floating-slow">
+                        <div class="art-overlay-stats">
+                            <div class="stat-pill">Supply: 1,000,000,000</div>
+                            <div class="stat-pill">Network: SOL</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-dashboard">
+                <div class="container">
+                    <div class="dashboard-grid">
+                        <div class="dash-card data-box">
+                            <div class="card-header">
+                                <span class="dot-indicator pulse-green"></span>
+                                <span class="mono-label">Market Cap</span>
+                            </div>
+                            <h3 class="data-value counter-up" data-target="15000000">$0</h3>
+                            <canvas id="chart-mcap" class="mini-chart"></canvas>
+                        </div>
+
+                        <div class="dash-card data-box">
+                            <div class="card-header">
+                                <span class="dot-indicator pulse-blue"></span>
+                                <span class="mono-label">24h Volume</span>
+                            </div>
+                            <h3 class="data-value counter-up" data-target="3200000">$0</h3>
+                            <canvas id="chart-vol" class="mini-chart"></canvas>
+                        </div>
+
+                        <div class="dash-card data-box">
+                            <div class="card-header">
+                                <span class="dot-indicator pulse-purple"></span>
+                                <span class="mono-label">Holders</span>
+                            </div>
+                            <h3 class="data-value counter-up" data-target="12450">0</h3>
+                            <div class="progress-bar-container">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-distribution pinned-section" data-bgcolor="#0a0a0a">
+                <div class="container">
+                    <h2 class="section-title">Distribution</h2>
+                    
+                    <div class="distribution-layout">
+                        <div class="dist-list">
+                            <div class="dist-item" data-slice="1" onmouseover="highlightChart('lp')">
+                                <div class="item-header">
+                                    <span class="color-key lp-color"></span>
+                                    <h4>Liquidity Pool</h4>
+                                    <span class="percent">85%</span>
+                                </div>
+                                <p>Locked and burned forever. The foundation of the $CWAT economy.</p>
+                            </div>
+                            
+                            <div class="dist-item" data-slice="2" onmouseover="highlightChart('cex')">
+                                <div class="item-header">
+                                    <span class="color-key cex-color"></span>
+                                    <h4>CEX Listings</h4>
+                                    <span class="percent">10%</span>
+                                </div>
+                                <p>Reserved in a multi-sig wallet strictly for Tier-1 exchange liquidity.</p>
+                            </div>
+
+                            <div class="dist-item" data-slice="3" onmouseover="highlightChart('marketing')">
+                                <div class="item-header">
+                                    <span class="color-key airdrop-color"></span>
+                                    <h4>Community & Art Fund</h4>
+                                    <span class="percent">5%</span>
+                                </div>
+                                <p>Used to commission more high-end 2D illustrations and reward early holders.</p>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-audit">
+                <div class="marquee-wrapper audit-marquee">
+                    <div class="marquee-inner">
+                        <div class="marquee-part mono-text">
+                            // MINT AUTHORITY REVOKED // FREEZE AUTHORITY REVOKED // LP TOKENS BURNED // ZERO TAX CONTRACT // 
+                        </div>
+                        <div class="marquee-part mono-text">
+                            // MINT AUTHORITY REVOKED // FREEZE AUTHORITY REVOKED // LP TOKENS BURNED // ZERO TAX CONTRACT // 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container audit-container mt-5">
+                    <div class="contract-box glass-panel code-terminal">
+                        <div class="terminal-header">
+                            <span class="term-btn red"></span>
+                            <span class="term-btn yellow"></span>
+                            <span class="term-btn green"></span>
+                            <span class="term-title">cwat-security-check.sh</span>
+                        </div>
+                        <div class="terminal-body mono-text">
+                            <p>> Initializing Solana mainnet connection...</p>
+                            <p class="success">> Connection established.</p>
+                            <p>> Querying $CWAT contract address...</p>
+                            <div class="ca-copy-block">
+                                <span class="ca-string highlight">Your_Contract_Address_Here</span>
+                                <button class="copy-btn" onclick="copyCA()">[ COPY ]</button>
+                            </div>
+                            <p>> Checking permissions...</p>
+                            <ul class="check-list">
+                                <li><span class="check-icon">[ OK ]</span> Minting is strictly disabled.</li>
+                                <li><span class="check-icon">[ OK ]</span> Buy Tax is 0%.</li>
+                                <li><span class="check-icon">[ OK ]</span> Sell Tax is 0%.</li>
+                                <li><span class="check-icon">[ OK ]</span> Raydium LP is 100% burned.</li>
+                            </ul>
+                            <p class="blink-cursor">_</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-how-to-buy" data-bgcolor="#050505">
+                <div class="container">
+                    <h2 class="section-title text-center">How to enter the forest</h2>
+                    
+                    <div class="stepper-container">
+                        <div class="step-card glass-card parallax-element" data-speed="0.95">
+                            <div class="step-number">01</div>
+                            <h3>Create a Wallet</h3>
+                            <p>Download Phantom or Solflare extension for your browser. Create a new wallet and securely store your seed phrase.</p>
+                            <a href="#" class="btn-outline-small">Get Phantom</a>
+                        </div>
+                        
+                        <div class="step-line"></div>
+                        
+                        <div class="step-card glass-card parallax-element" data-speed="1.05">
+                            <div class="step-number">02</div>
+                            <h3>Acquire $SOL</h3>
+                            <p>Buy Solana ($SOL) on a centralized exchange (like Binance or Coinbase) and send it to your new wallet address.</p>
+                        </div>
+                        
+                        <div class="step-line"></div>
+
+                        <div class="step-card glass-card parallax-element" data-speed="0.95">
+                            <div class="step-number">03</div>
+                            <h3>Connect to Dex</h3>
+                            <p>Go to Raydium or Jupiter. Connect your wallet. Paste the $CWAT token address to select our magical anomaly.</p>
+                            <a href="#" class="btn-outline-small">Go to Jupiter</a>
+                        </div>
+                        
+                        <div class="step-line"></div>
+
+                        <div class="step-card glass-card highlight-card parallax-element" data-speed="1.1">
+                            <div class="step-number">04</div>
+                            <h3>Swap & Hold</h3>
+                            <p>Swap your $SOL for $CWAT. Because there are zero taxes, you don't need to worry about complex slippage settings.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <div class="container">
+                    <h2 class="massive-text fade-in-up">EMBRACE THE ANOMALY</h2>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 $CWAT.</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/tokenomics.js"></script>
+</body>
+</html>

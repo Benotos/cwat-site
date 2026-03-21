@@ -1,0 +1,209 @@
+/* ==========================================================================
+   THE JOURNEY (ROADMAP) STYLES
+   ========================================================================== */
+
+.page-roadmap {
+    background-color: var(--ghibli-dark);
+    /* Crucial: Hide horizontal overflow so the native scrollbar doesn't show */
+    overflow-x: hidden; 
+}
+
+/* 1. Global Timeline Progress Bar */
+.timeline-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 9999;
+}
+
+.timeline-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--spirit-blue);
+    box-shadow: 0 0 15px var(--spirit-blue);
+    will-change: width;
+}
+
+/* 2. Hero Section */
+.roadmap-hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.scroll-indicator {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+.mouse-icon {
+    width: 24px;
+    height: 36px;
+    border: 2px solid var(--ghibli-light);
+    border-radius: 12px;
+    position: relative;
+}
+
+.mouse-icon::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 6px;
+    background: var(--spirit-blue);
+    border-radius: 2px;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* 3. Horizontal Scroll Architecture */
+.horizontal-scroll-section {
+    overflow: hidden;
+    height: 100vh; /* Takes up the full screen when pinned */
+    background: var(--ghibli-dark);
+}
+
+.horizontal-container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: max-content; /* Forces panels to sit side-by-side */
+    will-change: transform;
+}
+
+/* 4. Individual Chapter Panels */
+.journey-panel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 10vw;
+    overflow: hidden;
+}
+
+.panel-bg {
+    position: absolute;
+    inset: -5%; /* Slightly larger to allow parallax wiggle room */
+    width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.5; /* Dims the background so text is readable */
+    filter: saturate(1.2);
+}
+
+.panel-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 550px;
+    padding: 3rem;
+    background: rgba(12, 20, 16, 0.6);
+}
+
+.chapter-marker {
+    font-family: monospace;
+    color: var(--spirit-blue);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.panel-art {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    max-height: 75vh;
+    max-width: 45vw;
+    object-fit: contain;
+    z-index: 5;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
+    will-change: transform;
+}
+
+/* 5. Custom Runic Checklist */
+.roadmap-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.roadmap-list li {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.roadmap-list li.completed, 
+.roadmap-list li.active {
+    opacity: 1;
+}
+
+.runic-check { 
+    color: #45C4B0; 
+    font-size: 1.5rem;
+}
+
+.runic-pulse { 
+    color: var(--firefly-gold); 
+    font-size: 1.5rem;
+    animation: glow-pulse 2s infinite alternate; 
+}
+
+.runic-empty { 
+    color: #555; 
+    font-size: 1.5rem;
+}
+
+@keyframes glow-pulse {
+    0% { text-shadow: 0 0 5px var(--firefly-gold); }
+    100% { text-shadow: 0 0 20px var(--firefly-gold), 0 0 30px var(--firefly-gold); }
+}
+
+/* 6. Outro Section */
+.roadmap-outro {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--glass-border);
+}
+
+.massive-btn {
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    border: 2px solid var(--spirit-blue);
+    border-radius: 50px;
+    color: var(--spirit-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.massive-btn:hover {
+    background: var(--spirit-blue);
+    color: var(--ghibli-dark);
+    box-shadow: 0 0 30px rgba(139, 233, 253, 0.4);
+}

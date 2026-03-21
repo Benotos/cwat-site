@@ -1,0 +1,174 @@
+/* TOKENOMICS PAGE STYLES */
+.page-hero.split-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 15vh 10% 10vh;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    max-width: 500px;
+    margin-top: 2rem;
+}
+
+.art-frame {
+    position: relative;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.hero-art {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.art-overlay-stats {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.stat-pill {
+    background: var(--ghibli-moss);
+    border: 1px solid var(--spirit-blue);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-family: monospace;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: -5vh;
+    position: relative;
+    z-index: 10;
+}
+
+.dash-card {
+    padding: 2rem;
+    background: rgba(12, 20, 16, 0.8);
+    border: 1px solid rgba(139, 233, 253, 0.2);
+    border-radius: 20px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.dot-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--spirit-blue);
+    box-shadow: 0 0 10px var(--spirit-blue);
+}
+
+.data-value {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--ghibli-light);
+}
+
+/* Distribution Layout */
+.section-distribution {
+    padding: 10vh 0;
+}
+
+.distribution-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.dist-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.02);
+    border-left: 4px solid var(--spirit-blue);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Code Terminal */
+.code-terminal {
+    background: #050505;
+    border: 1px solid #333;
+    font-family: monospace;
+}
+
+.terminal-header {
+    background: #111;
+    padding: 10px 15px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.term-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.term-btn.red { background: #ff5f56; }
+.term-btn.yellow { background: #ffbd2e; }
+.term-btn.green { background: #27c93f; }
+
+.terminal-body {
+    padding: 2rem;
+    color: #00ff00; /* Hacker green */
+    line-height: 2;
+}
+
+/* Stepper UI */
+.stepper-container {
+    max-width: 800px;
+    margin: 4rem auto;
+}
+
+.step-card {
+    padding: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 4rem;
+    font-family: var(--font-display);
+    color: rgba(255,255,255,0.1);
+    line-height: 1;
+}
+
+.step-line {
+    height: 50px;
+    width: 2px;
+    background: var(--spirit-blue);
+    margin: 0 auto 2rem;
+}
