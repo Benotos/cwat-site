@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 originX: 'center',
                 originY: 'center',
                 transparentCorners: false,
-                cornerColor: '#8be9fd',
-                borderColor: '#8be9fd',
+                cornerColor: '#ffffff',       /* Changed to pure white */
+                borderColor: '#ffffff',       /* Changed to pure white */
+                cornerStrokeColor: '#0c1410', /* Added a dark border to the nodes */
                 cornerSize: 12,
                 padding: 10
             });
