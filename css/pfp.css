@@ -100,4 +100,32 @@
     
     /* 3 items per row on mobile instead of 4 */
     .asset-grid { grid-template-columns: repeat(3, 1fr); }
+
+    /* --- MOBILE HEADER FIX --- */
+    .site-header, .site-header.scrolled {
+        height: auto !important; /* Lets the header expand to fit everything */
+        padding: 1rem 0 !important;
+    }
+    
+    .header-inner {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px 20px !important; /* 10px up/down spacing, 20px left/right spacing */
+    }
+    
+    .nav-list a {
+        font-size: 0.75rem !important; /* Slightly smaller for phone screens */
+        padding: 5px 0 !important;
+    }
+    
+    /* Make the Raydium button fit perfectly underneath */
+    .btn-premium {
+        margin-top: 5px;
+        padding: 0.6rem 2rem !important;
+    }
 }
