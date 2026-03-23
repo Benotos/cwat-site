@@ -73,7 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 } else {
                     // Add as a drag-and-drop prop
                     if (img.width > 800) img.scaleToWidth(800);
-                    img.set({ left: 500, top: 500, originX: 'center', originY: 'center', cornerColor: '#8be9fd', borderColor: '#8be9fd', transparentCorners: false });
+                    img.set({ 
+                        left: 500, 
+                        top: 500, 
+                        originX: 'center', 
+                        originY: 'center', 
+                        transparentCorners: false,
+                        cornerColor: '#ffffff',       /* Changed to pure white */
+                        borderColor: '#ffffff',       /* Changed to pure white */
+                        cornerStrokeColor: '#0c1410', /* Added a dark border */
+                        cornerSize: 12,
+                        padding: 10
+                    });
                     canvas.add(img);
                     canvas.setActiveObject(img);
                 }
