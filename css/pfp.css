@@ -91,10 +91,13 @@
 }
 
 @media (max-width: 768px) {
-    .pfp-main { padding-top: 12vh; }
+    /* DOUBLE-TAP SPACING: Forces the text down away from the header on iOS */
+    .pfp-main { padding-top: 140px !important; }
+    .pfp-header { margin-top: 60px !important; }
+    
     .pfp-header h1 { font-size: 2.5rem !important; }
     
-    /* Stacks the buttons vertically on tiny screens so they are easy to tap */
+    /* Stacks the buttons vertically */
     .btn-group { flex-direction: column; }
     .action-btn { width: 100%; padding: 1rem; }
     
@@ -103,7 +106,7 @@
 
     /* --- MOBILE HEADER FIX --- */
     .site-header, .site-header.scrolled {
-        height: auto !important; /* Lets the header expand to fit everything */
+        height: auto !important; 
         padding: 1rem 0 !important;
     }
     
@@ -115,15 +118,14 @@
     .nav-list {
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 10px 20px !important; /* 10px up/down spacing, 20px left/right spacing */
+        gap: 10px 20px !important; 
     }
     
     .nav-list a {
-        font-size: 0.75rem !important; /* Slightly smaller for phone screens */
+        font-size: 0.75rem !important; 
         padding: 5px 0 !important;
     }
     
-    /* Make the Raydium button fit perfectly underneath */
     .btn-premium {
         margin-top: 5px;
         padding: 0.6rem 2rem !important;
