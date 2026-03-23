@@ -1,0 +1,103 @@
+.pfp-main { padding-top: 15vh; padding-bottom: 10vh; }
+
+.pfp-workspace {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* THE HALF-BOX FIX: Removed padding, added strict width and hidden overflow */
+.canvas-container-glass {
+    background: rgba(12, 20, 16, 0.6);
+    aspect-ratio: 1/1; 
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tools-panel {
+    padding: 2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 20px;
+}
+
+.tool-section { margin-bottom: 2rem; }
+
+.btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 0.8rem;
+    flex: 1; /* Makes buttons fill the space evenly */
+    text-align: center;
+}
+
+.action-btn:hover { background: rgba(255, 255, 255, 0.15); border-color: #fff; }
+
+.premium-glow { border-color: var(--spirit-blue); color: var(--spirit-blue); }
+.premium-glow:hover { background: var(--spirit-blue); color: var(--ghibli-dark); box-shadow: 0 0 15px var(--spirit-blue); }
+
+.danger-btn { border-color: rgba(255, 85, 85, 0.5); color: #ff5555; }
+.danger-btn:hover { background: #ff5555; color: #fff; }
+
+.w-100 { width: 100%; }
+.border-top { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+.asset-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.asset-thumbnail {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding: 5px;
+}
+
+.asset-thumbnail:hover { transform: scale(1.05); border-color: var(--spirit-blue); background: rgba(139, 233, 253, 0.1); }
+
+/* Custom Scrollbar for the tools panel */
+.tools-panel::-webkit-scrollbar { width: 6px; }
+.tools-panel::-webkit-scrollbar-track { background: transparent; }
+.tools-panel::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+
+
+/* ==========================================================================
+   MOBILE COMPATIBILITY (FITS PERFECTLY ON PHONES)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .pfp-workspace { grid-template-columns: 1fr; gap: 2rem; }
+    .tools-panel { max-height: none; overflow: visible; padding: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .pfp-main { padding-top: 12vh; }
+    .pfp-header h1 { font-size: 2.5rem !important; }
+    
+    /* Stacks the buttons vertically on tiny screens so they are easy to tap */
+    .btn-group { flex-direction: column; }
+    .action-btn { width: 100%; padding: 1rem; }
+    
+    /* 3 items per row on mobile instead of 4 */
+    .asset-grid { grid-template-columns: repeat(3, 1fr); }
+}
